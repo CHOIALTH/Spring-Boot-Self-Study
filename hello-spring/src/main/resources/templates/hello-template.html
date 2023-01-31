@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--thymeleaf template 사용하겠다-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello-template</title>
+</head>
+<body>
+  <!--thymeleaf template 장점으로 서버없이 구동해도, html상 아래의 소스가 보인다-->
+  <p th:text="'hello!! ' + ${name}" >hello! empty</p>
+  <!--서버를 구동시 hello! hello ' + ${name}값이 empty 부분을 대체한다. -->
+</body>
+</html>
