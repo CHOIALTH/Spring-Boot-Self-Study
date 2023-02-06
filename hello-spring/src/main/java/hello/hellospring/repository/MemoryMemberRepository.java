@@ -28,7 +28,7 @@ public class MemoryMemberRepository implements MemberRepository{
         /*lambda 활용*/
         /*loop를 돌리는 것*/
         return store.values().stream()
-                /*name이 파라미터로 넘어온 name과 같은 경우에만 필터링 됨 */
+                /*meber.getName이 파라미터로 넘어온 name과 같은 경우에만 필터링 됨 */
                 .filter(member -> member.getName().equals(name))
                 /*하나라도 찾으면 반환하고, 끝까지 없으면 Optional에 null이 포함되어 반환됨*/
                 .findAny();
@@ -38,5 +38,8 @@ public class MemoryMemberRepository implements MemberRepository{
     public List<Member> findAll() {
         /*store.values() = 안에 담긴 멤버들 */
         return new ArrayList<>(store.values());
+    }
+    public void clearStore(){
+        store.clear();
     }
 }
