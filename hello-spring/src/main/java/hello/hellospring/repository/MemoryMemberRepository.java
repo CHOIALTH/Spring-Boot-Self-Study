@@ -2,9 +2,12 @@ package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
 
+import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository{
     /* Map<key, value>*/
+    //static은 instance와 상관없이 class 레벨에 붙는 것
     private static Map<Long, Member> store = new HashMap<>();
     private static Long sequence = 0L;
 
