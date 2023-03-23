@@ -1,20 +1,18 @@
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
-import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MemberServiceTest {
 
     MemberService memberService;
-    MemberRepository memberRepository;
+    MemoryMemberRepository memberRepository;
     //clear해주고 싶은데 MemberService 밖에 없으므로 clear가 안된다. MemoryMemberRepository()를 가져와줘야함
 
     //MemoryMemberRepositoryTest의 MemoryMemberRepository()와 다른 인스턴스를 생성하는 꼴.. 불필요하게 중복코드가 되버린다

@@ -6,12 +6,15 @@ import hello.hellospring.repository.MemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+/* 스프링 : 오호라, 얘가 서비스구나!*/
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     //MemberService 입장에서는 직접 new 하지 않고 memberRepository를 외부에서 넣어줌.
     //이런 것을 DI(Dependency Injection)라고 함
+
+    /* 스프링 : 아, 너는 MemberRepository가 필요하구나*/
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

@@ -4,7 +4,6 @@ import hello.hellospring.domain.Member;
 
 import java.util.*;
 
-
 public class MemoryMemberRepository implements MemberRepository{
     /* Map<key, value>*/
     //static은 instance와 상관없이 class 레벨에 붙는 것
