@@ -34,17 +34,11 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+    
+    // AOP 사용 시 @Component 처리보다는 아래와 같이, AOP 사용 중임을 명시하는 것이 권장됨
 /*    @Bean
-    public MemberRepository memberRepository(){
-        *//* MemberRepository는 인터페이스고, MemoryMemberRepository가 구현체이므로*//*
-        return new MemoryMemberRepository();
+    public TimeTraceAop timeTraceAop(){
+        return new TimeTraceAop();
     }*/
-    // @Bean
-    // public MemberRepository memberRepository(){
-        // return new JdbcMemberRepository(dataSource);
-        // return new JdbcTemplateMemberRepository(dataSource);
-        // return new JpaMemberRepository(em);
-
-    // }
 
 }
